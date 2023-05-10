@@ -81,9 +81,9 @@ WSGI_APPLICATION = 'order.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': BASE_DIR / 'bols_order',
+        'NAME': 'bolsdb',
         'USER'    : 'bols',
-        'PASSWORD': 'B3@uty',
+        'PASSWORD': 'B3@uty..',
     }
 }
 
