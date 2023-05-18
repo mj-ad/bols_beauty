@@ -7,8 +7,9 @@ class Order(models.Model):
     fullName = models.CharField(max_length=50)
     email = models.EmailField(max_length=254)
     number = models.PhoneNumberField()
-    service = models.CharField(max_length=50)
-    place = models.CharField(max_length=50)
+    service = models.MultipleChoiceField()
+    image = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=None)
+    place = models.ChoiceField(choices=['Salon', 'Other'])
     
     class Meta:
         db_table = 'order_form'
