@@ -8,7 +8,7 @@ class Order(models.Model):
     email = models.EmailField(max_length=254)
     number = models.PhoneNumberField()
     service = models.MultipleChoiceField()
-    image = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=None)
+    image = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=None, null=True)
     place = models.ChoiceField(choices=['Salon', 'Other'])
     
     class Meta:
