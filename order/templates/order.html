@@ -13,7 +13,9 @@
         </div>
 
         <div class="container">
-            <form>
+            <form action="output" method="post">
+                {% csrf_token %}
+                {% render_form serializer %}
                 <div class="order">
                     <label for="appointmentDate">Appointment date</label>
                     <input type="date" id="date" name="date"/>

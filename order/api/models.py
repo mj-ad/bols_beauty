@@ -11,7 +11,7 @@ class Order(models.Model):
     email = models.EmailField(max_length=254)
     number = PhoneNumberField()
     service = models.JSONField(max_length=100)
-    image = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=None, blank=True)
+    image = models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=None, blank=True, null=True)
     place = models.CharField(choices=PLACE_CHOICES, max_length=20)
     
     class Meta:
