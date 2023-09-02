@@ -22,10 +22,7 @@ def post(request, *args, **kwargs):
     serialize = OrderSerializer(data=request.data)
     if serialize.is_valid():
         serialize.save()
-        return Response({
-            'data': serialize.data,
-            'message': 'Successful'
-            }, status=status.HTTP_201_CREATED)
+        return render(request, 'order.html')
     else:
         default = serialize.errors
         error = {}
